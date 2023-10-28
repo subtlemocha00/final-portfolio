@@ -2,4 +2,25 @@
 :root {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.lg-text {
+    font-size: 2em;
+}
+
+i.instagram-icon {
+        color: #fac71e ;
+}
+
+
+@media (min-width: 376px) {
+    .text-size {
+        font-size: 1.5em;
+    }
 }
