@@ -5,6 +5,11 @@
     color: black;
 }
 
+#navList {
+    /* visibility:hidden; */
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -19,8 +24,17 @@ i.instagram-icon {
 }
 
 
-@media (min-width: 376px) {
+@media (min-width: 768px) {
     .text-size {
         font-size: 1.5em;
+    }
+    #titleDiv {
+        position: fixed;
+    }
+    #navList {
+        /* display: block; */
+    }
+    #contentDiv {
+        right: 0%;
     }
 }
