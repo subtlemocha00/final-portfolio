@@ -1,13 +1,13 @@
 /* control font attributes here */
 :root {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: black;
-}
-
-#navList {
-    /* visibility:hidden; */
-    display: none;
+/* use a 60-30-10 rule with color scheme */
+--colorA: #364483;
+--colorB: #1A253D;
+--colorC: #C77A3D;
+--colorD: #2664BE;
 }
 
 a {
@@ -22,19 +22,35 @@ a {
 i.instagram-icon {
         color: #fac71e ;
 }
+body {
+    background-color: var(--colorB);
+    color: var(--colorD);
+}
+#mainContainer {
+}
+#navList {
+}
+#nameCard {
+}
 
+ul#navList li {
+    background-color: var(--colorB);
+    color: var(--colorD);
+}
+ul#navList li:hover {
+    /* background-color: var(--colorD); */
+    color: var(--colorC);
+}
 
 @media (min-width: 768px) {
-    .text-size {
-        font-size: 1.5em;
-    }
     #titleDiv {
         position: fixed;
     }
-    #navList {
-        /* display: block; */
-    }
     #contentDiv {
-        right: 0%;
+        position:  absolute;
+        right: 0;
     }
+    /* .text-size {
+        font-size: 1.33em;
+    } */
 }
