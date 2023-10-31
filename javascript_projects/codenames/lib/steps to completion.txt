@@ -1,0 +1,18 @@
+- randomly generate an array with a color property assigned to each of the 25 items [DONE]
+
+- assign 'colour' properties (red/blue/neutral/black) to each of the items in the list [DONE]
+
+- assign the ith item to the ith card/div
+-- the cards should already have all colour info attached by now [DONE]
+
+--- add the 'word.color' to the classList of each card
+[DONE]
+--- remove the color classList before adding one for a new game [DONE]
+
+----the onclick event will toggle the colour change and the colour property will do nothing until the card is clicked [DONE]
+
+- change click activity - if it's red card and red clicks, confirm and add point, change card color [DONE]
+--if it's red card and blue clicks it, switch to red's turn [DONE]
+
+-- on a win, show all remaining cards and colours
+--- change to opposite team starting

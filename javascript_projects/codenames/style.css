@@ -1,0 +1,397 @@
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+@import url(https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap);
+/* @import "../../../style.css"; */
+
+:root {
+  /* font-size: 2.5vmin; */
+  --font-walter: "Walter Turncoat";
+  --font-nanum: "Nanum Brush Script";
+  --font-color-main: rgb(255, 255, 255);
+}
+
+body {
+  /* overflow: hidden; */
+  /* background: url(https://media.istockphoto.com/photos/green-felt-seamless-texture-picture-id1020149446?k=6&m=1020149446&s=170667a&w=0&h=OuHTnF0eqnbvxjbzV7N54DF1uYN7NAWQinPjQQQyoS8=); */
+  /* width: 90vw; */
+}
+
+.appContainer {
+  margin-top: 1rem;
+  /* max-width: fit-content; */
+  /* min-height: 100vh; */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul#wordList {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 50vh;
+  /* min-width: fit-content; */
+  list-style-type: none;
+  /* align-items: center; */
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    rgb(20, 20, 20) 10%,
+    rgb(80, 80, 80) 80%,
+    rgb(20, 20, 20)
+  );
+  padding: 0.8rem;
+  /* margin: 0.8rem; */
+  font-family: "Walter Turncoat", cursive;
+  /* font-size: 1.2vmin; */
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.2rem;
+  box-shadow: inset -3px 0px 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0px -3px 1px 1px rgba(255, 255, 255, 0.7),
+    6px 6px 3px 2px rgba(0, 0, 0, 0.4), -6px 6px 3px 2px rgba(0, 0, 0, 0.4);
+  /* list-style-position: inside; */
+  /* padding-left: 10%; */
+}
+
+.wholeShebang {
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  /* grid-template-rows: 2fr 1fr; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: var(--font-walter);
+  /* margin: ; */
+  /* font-weight: 600; */
+  /* width: fit-content; */
+}
+
+.wordList {
+  display: none;
+  /* position: absolute; */
+  /* top: 10rem;
+  left: 10rem; */
+  border: 4px groove rgba(255, 255, 255, 0.4);
+  justify-content: center;
+  align-self: center;
+  min-height: 100%;
+}
+
+.visible {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+}
+
+.button {
+  cursor: pointer;
+  background-color: rgba(20, 20, 20, 1);
+  color: var(--font-color-main);
+  border-radius: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  margin: 0.8rem;
+  font-family: inherit;
+  /* font-size: 2.5vmin; */
+  font-weight: 600;
+  box-shadow: inset -3px 0px 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0px -3px 1px 1px rgba(255, 255, 255, 0.7),
+    6px 6px 3px 2px rgba(0, 0, 0, 0.4), -6px 6px 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.button:hover {
+  background-color: rgb(40, 40, 40);
+}
+
+.spy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.spyButton {
+  cursor: pointer;
+  /* margin: 0 0.8rem; */
+  padding: .25rem;
+  /* height: 5rem;
+  width: 5rem; */
+  /* background-image: url("spyvspy.svg"); */
+  background-color: rgb(253, 236, 205);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  box-shadow: inset -3px 0px 1px 1px rgba(255, 255, 255, 0.7),
+    inset 0px -3px 1px 1px rgba(255, 255, 255, 0.7),
+    6px 6px 3px 2px rgba(0, 0, 0, 0.4), -6px 6px 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.spyButton:hover {
+  background-color: rgb(248, 244, 2);
+}
+
+.spyText {
+  background: -webkit-linear-gradient(rgb(248, 244, 2), rgb(71, 3, 148));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0.32rem -0.8rem 2.4rem black;
+  font-size: 3vmin;
+  font-weight: 600;
+  /* margin: 1rem; */
+}
+
+.application {
+  display: flex;
+  flex-direction: column;
+  /* width: 95vw; */
+  /* flex: 0 1 1; need to figure this out for responsiveness */
+  justify-content: center;
+  align-items: center;
+  border: 4px groove rgba(255, 255, 255, 0.4);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+}
+
+.headerRow {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100%;
+  /* margin: 0.5rem 0; */
+}
+
+.round {
+  color: white;
+  /* position: absolute; */
+  /* top: -2rem; */
+  /* left: 29rem; */
+}
+
+.title {
+  font-size: 3vw;
+  /* font-weight: 1000; */
+  text-align: center;
+  /* font-family: var(--font-nanum); */
+  grid-column: 1 / span 2;
+  width: 100%;
+  background: -webkit-linear-gradient(rgb(201, 197, 0), rgb(252, 255, 217));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1rem -1rem 2rem black;
+}
+
+.team {
+  /* display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "endBtn teamName Score"
+    "endBtn teamName roundsWon ."; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: space-around; */
+  padding: 0.2rem 0.2rem;
+  /* font-size: 1.2rem; */
+  /* text-shadow: 0.16rem 0.16rem 0.8rem rgb(255, 153, 0),
+    -0.48rem -0.8rem 0.8em rgb(238, 255, 0); */
+}
+
+.redBar {
+  border: 2px dashed rgba(160, 0, 0, 1);
+}
+
+.blueBar {
+  border: 2px dashed rgb(0, 0, 207);
+}
+
+.turnIndicator {
+  background-color: rgba(251, 255, 32, 0.75);
+}
+
+.redHeader {
+  /* color: rgb(160, 0, 0); */
+  color: white;
+  margin-right: 1rem;
+}
+
+.blueHeader {
+  /* color: rgb(0, 0, 207); */
+  color: white;
+  margin-left: 1rem;
+}
+
+.roundsWon {
+  color: white;
+}
+
+.endTurn {
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 5px outset rgba(0, 0, 0, 0.8);
+  border-right: 3px outset rgba(0, 0, 0, 0.5);
+  /* border-top: 4px inset rgba(0, 0, 0, 0.8); */
+  border-left: 2px outset rgba(0, 0, 0, 0.5);
+  /* background-color: rgb(167, 167, 167); */
+  background-position: center;
+  background-size: cover;
+  text-shadow: none;
+  /* box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.4),
+              -2px 4px 4px 2px rgba(0, 0, 0, 0.4); */
+  /* font-size: 2rem; */
+  border-radius: 5px;
+  padding: 0.3rem 1rem;
+  margin: 0 1rem;
+}
+
+.endTurn:hover {
+  background-color: rgba(238, 238, 238, 0.6);
+}
+
+.gameBoard {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.5rem;
+  /* width: 100%; */
+  margin: 0.8rem;
+  /* height: fit-content; */
+}
+
+.card {
+  cursor: pointer;
+  /* flex: 0 1 1; */
+  min-height: 6.5rem;
+  min-width: 10rem;
+  border-radius: 1.2rem;
+  font-size: 3vmin;
+  color: var(--font-color-main);
+  background-color: black;
+  /* background: url("abstract_pattern.png"); */
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset 3px 0px 1px 2px rgba(255, 255, 255, 0.7),
+    inset -3px 0px 1px 2px rgba(255, 255, 255, 0.7),
+    inset 0px 3px 1px 2px rgba(255, 255, 255, 0.7),
+    inset 0px -3px 1px 2px rgba(255, 255, 255, 0.7),
+    6px 6px 3px 2px rgba(0, 0, 0, 0.4), -6px 6px 3px 2px rgba(0, 0, 0, 0.4);
+}
+
+.cardOverlay {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  box-sizing: border-box;
+  border: 1px solid rgb(0, 0, 0);
+  /* z-index: 100; */
+}
+
+.cardOverlay:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.red {
+  color: rgba(160, 0, 0, 1);
+  box-shadow: inset 3px 0px 1px 2px rgba(160, 0, 0, 1),
+    inset -3px 0px 1px 2px rgba(160, 0, 0, 1),
+    inset 0px 3px 1px 2px rgba(160, 0, 0, 1),
+    inset 0px -3px 1px 2px rgba(160, 0, 0, 1);
+  transition: ease-out cubic-bezier(0, 1, 0, 1);
+  transition-duration: 1.2s;
+}
+
+.blue {
+  color: rgba(0, 0, 255, 1);
+  box-shadow: inset 3px 0px 1px 2px rgba(0, 0, 255, 1),
+    inset -3px 0px 1px 2px rgba(0, 0, 255, 1),
+    inset 0px 3px 1px 2px rgba(0, 0, 255, 1),
+    inset 0px -3px 1px 2px rgba(0, 0, 255, 1);
+  transition: ease-out cubic-bezier(0, 1, 0, 1);
+  transition-duration: 1.2s;
+}
+
+.neutral {
+  color: rgb(148, 145, 1);
+  box-shadow: inset 3px 0px 1px 2px rgba(148, 145, 1, 1),
+    inset -3px 0px 1px 2px rgba(148, 145, 1, 1),
+    inset 0px 3px 1px 2px rgba(148, 145, 1, 1),
+    inset 0px -3px 1px 2px rgba(148, 145, 1, 1);
+  transition: ease-out cubic-bezier(0, 1, 0, 1);
+  transition-duration: 1.2s;
+}
+
+.black {
+  color: rgba(104, 33, 146, 1);
+  box-shadow: inset 3px 0px 1px 2px rgba(104, 33, 146, 1),
+    inset -3px 0px 1px 2px rgba(104, 33, 146, 1),
+    inset 0px 3px 1px 2px rgba(104, 33, 146, 1),
+    inset 0px -3px 1px 2px rgba(104, 33, 146, 1);
+  transition: ease-in cubic-bezier(0, 1, 0, 1);
+  transition-duration: 2s;
+}
+
+.assassinated {
+  position: absolute;
+  top: 50%;
+  left: 11.5%;
+  color: rgba(104, 33, 146, 1);
+  z-index: 10;
+  visibility: hidden;
+  font-size: 4rem;
+  text-align: center;
+  /* transition-duration: 1.5s; */
+  background-color: rgba(240, 248, 255, 0.4);
+}
+
+.nameInput {
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+
+.joinBtn {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.redBtn {
+  background-color: red;
+  color: white;
+}
+
+.blueBtn {
+  background-color: blue;
+  color: white;
+}
+
+.gameArea {
+  display: flex;
+}
+
+.playerNames {
+  padding: 2rem 3rem;
+  margin: 1rem;
+  background-color: rgba(255, 255, 255, 0.432);
+}
+
+/* CREATE A "RED BUTTON"/"BLUE BUTTON" class that can be added on while doing all other styling within a single class, a la .join class and .redbutton, .bluebutton classes */

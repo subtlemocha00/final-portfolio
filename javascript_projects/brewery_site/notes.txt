@@ -1,0 +1,1 @@
+update brewery page nav to collapse into a dropdown at around 500px
