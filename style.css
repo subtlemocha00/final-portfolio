@@ -40,12 +40,18 @@ body {
 #jsList {
     /* background-color: var(--colorB); */
     color: var(--colorD);
+}
 
+.projectCard {
+    color: var(--colorD);
+    background-color: var(--colorB);
+    border-color: var(--colorC);
 }
 
 ul#navList li {
     background-color: var(--colorB);
     color: var(--colorD);
+    border: none;
 }
 ul#navList li:hover {
     /* background-color: var(--colorD); */

@@ -38,7 +38,7 @@
 		>
 			<div
 				id="titleDiv"
-				class="mt-5 col col-md-6 h-auto d-flex flex-column align-items-center"
+				class="mt-5 col col-md-5 h-auto d-flex flex-column align-items-center"
 			>
 				<header id="nameCard" class="col text-center">
 					<h1>Kevin Turley</h1>
@@ -50,21 +50,22 @@
 				</header>
 				<ul id="navList" class="list-group col d-none d-md-block p-4">
 					<li class="list-group-item text-right">
-						<span>---------------</span>
+						<!-- <span>---------------</span> -->
+						<i class="fas fa-angle-double-right"></i>
 						<span>ABOUT</span>
-						<span>---</span>
+						<!-- <span>---</span> -->
 					</li>
 					<a href="#js-projects">
 						<li class="list-group-item text-right">
-							<span>---------</span>
+							<!-- <span>---------</span> -->
+							<i class="fas fa-angle-double-right"></i>
 							<span>JS PROJECTS</span>
-							<span>---</span>
+							<!-- <span>---</span> -->
 						</li>
 					</a>
 					<li class="list-group-item text-right">
-						<span>----</span>
+						<i class="fas fa-angle-double-right"></i>
 						<span>REACT PROJECTS</span>
-						<span>---</span>
 					</li>
 				</ul>
 				<ul class="listgroup col col-md-6 d-flex justify-content-center">
@@ -91,7 +92,7 @@
 					></a>
 				</ul>
 			</div>
-			<div id="contentDiv" class="p-5 container col col-md-6">
+			<div id="contentDiv" class="p-5 container col col-md-7">
 				<section>
 					<p class="row">
 						Welcome to my portfolio website! I am a passionate web developer
@@ -131,11 +132,24 @@
 					</p>
 				</section>
 				<section id="js-projects">
-					<ul id="jsList" class="">
-						<li class="">
+					<ul id="jsList" class="container px-0 py-md-4">
+						<h2>JavaScript Projects</h2>
+						<li class="card p-3 my-4 projectCard">
 							<a href="./javascript_projects/grocery_list/index.html" class=""
 								>Grocery List</a
 							>
+							<img
+								class="img-fluid border border-danger my-3"
+								src="./public/images/GroceryList.png"
+								alt="grocery app"
+							/>
+							<p>
+								This is a quick grocery list builder. It includes a button that
+								adds staple items and an input for adding items that are not
+								included in the staples list. Items can be moved around and
+								deleted. Uses local storage to allow user to close and re-open
+								the page without losing the list.
+							</p>
 						</li>
 						<li class="">
 							<a href="./javascript_projects/brewery_site/index.html" class=""
