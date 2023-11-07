@@ -3,11 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 
 :root {
-  /* font-size: 10px; */
-  /* font family */
-  /* --main-font-family: 'Architects Daughter', cursive; */
-  /* --main-font-family: Arial, Helvetica, sans-serif; */
-  --main-font-family: "Kalam", cursive;
+  --main-font-family: Arial, Helvetica, sans-serif;
+  /* --main-font-family: "Kalam", cursive; */
   /* font sizes */
   --font-20: 20px;
   --font-30: 30px;
@@ -15,14 +12,14 @@
   --font-50: 50px;
   --font-60: 60px;
   /* colours */
-  --main-font-color: rgb(15, 114, 121);
+  --main-font-color: rgb(153, 255, 191);
   --empty-font-color: rgba(50, 0, 143, 0.7);
   --button-font-color: rgb(18, 18, 20);
-  --board-edge-color: rgb(240, 229, 80);
+  --board-edge-color: rgb(85, 240, 80);
   --opt1-color: linear-gradient(rgb(103, 172, 0), rgb(237, 255, 218));
   --opt2-color: linear-gradient(rgb(47, 172, 255), rgb(212, 254, 255));
   --opt3-color: linear-gradient(rgb(255, 72, 72), rgb(255, 219, 219));
-  /* --opt4-color: ; */
+  --opt4-color: linear-gradient(rgb(255, 215, 72), rgb(255, 219, 219));
   --hover-color: rgb(255, 255, 34);
   --hover-txt-color: orange;
   --check-yes-color: rgb(231, 221, 75);
@@ -39,9 +36,6 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   /* background: url('https://www.desktopbackground.org/p/2014/01/06/696987_wallpapers-plain-images-heritage-outdoors-bulletin-board-800x600_800x600_h.gif'); */
-  /* background: url(./lib/pineapples.jpg); */
-  /* background-position: top;
-  background-size: auto; */
 }
 
 ul {
@@ -65,27 +59,21 @@ ul {
   font-size: inherit;
   font-family: inherit;
   padding: 0em 0.5em;
-  background: linear-gradient(0.25turn,
-      rgba(200, 220, 255, 0.9),
-      rgba(229, 245, 255, 0.9));
+  background: inherit;
   box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
+  color: var(--main-font-color);
 }
 
 .listContainer,
 .sideListContainer {
-  /* display: flex;
-  flex-direction: column;
-  align-items: top; */
-  /* width: 90%; */
-  border: 16px solid var(--board-edge-color);
-  border-radius: 1em;
-  background: linear-gradient(135deg,
-      rgb(187, 199, 221) 65%,
-      rgb(203, 205, 207));
+  border: 2px solid var(--board-edge-color);
+  /* background: linear-gradient(135deg, */
+      /* rgb(187, 199, 221) 65%,
+      rgb(203, 205, 207)); */
   /* margin: 0.5em; */
   text-shadow: 4px 2px 4px rgb(131, 141, 233);
-  box-shadow: 5px 5px 12px 12px rgba(0, 0, 0, 0.493),
-    3px 4px 2px 4px var(--board-edge-color),
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.493),
+    1px 1px 1px 1px var(--board-edge-color),
     inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
 }
 
@@ -108,7 +96,7 @@ ul {
 }
 
 .itemButton {
-  font-family: inherit;
+  /* font-family: inherit; */
   vertical-align: middle;
   display: inline-flex;
   justify-content: center;
@@ -154,44 +142,54 @@ ul {
 
 .buttonContainer {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
 }
 
 .button {
   font-size: var(--font-40);
   font-family: inherit;
-  color: var(--button-font-color);
+  color: inherit;
   margin: 0.25em 0.5em;
-  padding: 0.25em 0.5em;
-  border: 2px solid black;
+  background-color: inherit;
+  /* padding: 0.25em 0.5em; */
+  border: 2px solid var(--board-edge-color);
 }
 
 .textInput,
 .button {
-  border-radius: 25% 25% 25% 25%;
+  /* border-radius: 25% 25% 25% 25%; */
 }
 
 .add {
-  background: var(--opt1-color);
-  box-shadow: 2px 4px 1px 2px rgb(53, 78, 15),
-    3px 3px 10px 10px rgba(0, 0, 0, 0.5);
+  /* background: var(--opt1-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(53, 78, 15),
+    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .staples {
-  background: var(--opt2-color);
-  box-shadow: 2px 4px 1px 2px rgb(15, 58, 78),
-    3px 3px 10px 10px rgba(0, 0, 0, 0.5);
-}
+  /* background: var(--opt2-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(15, 58, 78),
+    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
+  }
 
 .clear {
-  background: var(--opt3-color);
-  box-shadow: 2px 4px 1px 2px rgb(105, 29, 29),
-    3px 3px 10px 10px rgba(0, 0, 0, 0.5);
+  /* background: var(--opt3-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(105, 29, 29), */
+    /* 3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
+  }
+.save {
+  /* background: var(--opt4-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(15, 58, 78),
+    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
+
 }
 
 .button:hover {
-  background: var(--hover-color);
-  box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
-    7px 7px 10px 10px rgba(0, 0, 0, 0.5);
+  background: orange;
+  /* box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
+    7px 7px 10px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .fa-list-alt {
@@ -201,7 +199,7 @@ ul {
 
 .empty-state {
   display: none;
-  color: var(--empty-font-color);
+  color: var(--main-font-color);
   flex-direction: column;
   align-items: center;
   width: 100%;
@@ -243,15 +241,3 @@ ul {
     padding: 5px;
   }
 }
-
-/* .produce {
-  background-color: rgb(25, 207, 25);
-}
-
-.meat {
-  background-color: rgb(168, 102, 41);
-}
-
-.dairy {
-  background-color: rgb(3, 110, 182);
-} */

@@ -1,92 +1,149 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Groceries</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Font Awesome Icons -->
+		<link rel="stylesheet" href="../../public/fontawesome/css/all.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../style.css" />
+		<!-- <link rel="stylesheet" href="../style.css" /> -->
+		<link rel="stylesheet" href="style.css" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+			crossorigin="anonymous"
+		></script>
+	</head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Groceries</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="../../public/fontawesome/css/all.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="../../style.css" />
-  <!-- <link rel="stylesheet" href="../style.css" /> -->
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-</head>
+	<body>
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline">
+			<div class="container-fluid">
+				<i class="navbar-brand fas fa-coffee"></i>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div
+					class="collapse navbar-collapse justify-content-end"
+					id="navbarNavAltMarkup"
+				>
+					<ul class="navbar-nav me-5">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="../../index.html"
+								>Home</a
+							>
+						</li>
+						<li class="nav-item dropdown me-3">
+							<a
+								class="nav-link dropdown-toggle active"
+								data-bs-toggle="dropdown"
+								href="#"
+								role="button"
+								aria-expanded="false"
+								>JS Projects</a
+							>
+							<ul class="dropdown-menu">
+								<li class="nav-item">
+									<a href="#" class="dropdown-item active bg-dark"
+										>Grocery List</a
+									>
+								</li>
+								<li class="nav-item">
+									<a href="../brewery_site/index.html" class="dropdown-item"
+										>Brewery Page</a
+									>
+								</li>
+								<li class="nav-item">
+									<a href="../codenames/index.html" class="dropdown-item"
+										>Codenames</a
+									>
+								</li>
+								<li>
+									<hr class="dropdown-divider" />
+								</li>
+								<li class="nav-item">
+									<a
+										href="../index.html"
+										class="dropdown-item"
+										aria-current="page"
+										>All Projects</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="../react_projects/index.html"
+								>React Projects</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Blog</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- MAIN BODY -->
+		<div
+			class="container d-flex col-6 align-content-center justify-content-center mt-4"
+		>
+			<div
+				class="userInterface row d-flex justify-content-center align-items-center"
+			>
+				<form autocomplete="off" id="myForm" class="form">
+					<label for="userInput">Add Item:</label>
+					<input
+						id="userInput"
+						class="textInput"
+						type="text"
+						placeholder="..."
+						autofocus="autofocus"
+					/>
+					<div class="buttonContainer">
+						<button id="submitButton" class="button add" type="submit">
+							Add Item
+						</button>
+						<button id="staplesButton" class="button staples" type="button">
+							Add Staples
+						</button>
+						<button id="clearButton" class="button clear" type="button">
+							Clear All
+						</button>
+						<!-- <input
+							id="saveButton"
+							class="button save"
+							type="submit"
+							value="SAVE"
+						/> -->
+					</div>
+				</form>
+				<div class="listContainer">
+					<ul id="list" class="groceryList container p-4"></ul>
+					<div class="empty-state">
+						<span style="font-size: var(--font-30)">Add some stuff...</span>
+						<i class="far fa-list-alt"></i>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline">
-    <div class="container-fluid">
-      <i class="navbar-brand fas fa-coffee"></i>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-        <ul class="navbar-nav me-5">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
-          </li>
-          <li class="nav-item dropdown me-3">
-            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
-              aria-expanded="false">JS
-              Projects</a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a href="#" class="dropdown-item active bg-dark">Grocery List</a></li>
-              <li class="nav-item"><a href="../brewery_site/index.html" class="dropdown-item">Brewery Page</a></li>
-              <li class="nav-item"><a href="../codenames/index.html" class="dropdown-item">Codenames</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li class="nav-item"><a href="../index.html" class="dropdown-item" aria-current="page">All
-                  Projects</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="../react_projects/index.html">React Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Blog</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- MAIN BODY -->
-  <div class="container d-flex col-6 align-content-center justify-content-center mt-4">
-    <div class="userInterface row d-flex justify-content-center align-items-center">
-      <form autocomplete="off" id="myForm" class="form">
-        <input id="userInput" class="textInput" type="text" placeholder="Add New Item..." autofocus="autofocus" />
-        <div class="buttonContainer">
-          <input id="submitButton" class="button add" type="submit" value="ADD" />
-          <input id="staplesButton" class="button staples" type="submit" value="STAPLES" />
-          <input id="clearButton" class="button clear" type="submit" value="CLEAR" />
-        </div>
-      </form>
-      <div class="listContainer">
-        <ul id="list" class="groceryList container p-4"></ul>
-        <div class="empty-state">
-          <span style="font-size: var(--font-30)">Add some stuff...</span>
-          <i class="far fa-list-alt"></i>
-        </div>
-      </div>
-    </div>
-    <!-- <ul id="list" class="groceryList container"></ul> -->
-    <!-- <div class="sideInterface">
-      <div class="sideListContainer">
-        <ul id="sideList">FOOD</ul>
-      </div>
-    </div> -->
-  </div>
-
-  <script src="../../homepage/main.js" async defer></script>
-  <script src="main.js" async defer></script>
-</body>
-
+		<script src="../../homepage/main.js" async defer></script>
+		<script src="main.js" async defer></script>
+	</body>
 </html>
