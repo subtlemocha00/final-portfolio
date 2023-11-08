@@ -9,6 +9,7 @@
 --colorC: #3d70c7;
 /* --colorC: #C77A3D; */
 --colorD: #2664BE;
+--colorE: #55f050;
 }
 
 a, a:hover {
@@ -58,6 +59,21 @@ ul#navList li:hover {
     /* background-color: var(--colorD); */
     color: var(--colorC);
 }
+.navbar {
+    background-color: var(--colorA) !important;
+}
+.nav-link, .nav-underline, .navbar-nav {
+    color: var(--colorE) !important;
+    
+}
+ul.dropdown-menu, .dropdown-item {
+    background-color: var(--colorA);
+    color: var(--colorE) !important;
+
+}
+.dropdown-item:hover {
+    background-color: var(--colorC);
+}
 
 @media (min-width: 768px) {
     #titleDiv {
@@ -67,11 +83,5 @@ ul#navList li:hover {
         position:  absolute;
         right: 0;
         border-left: 1px solid var(--colorD);
-        /* border-width: ; */
-        
-
     }
-    /* .text-size {
-        font-size: 1.33em;
-    } */
 }
