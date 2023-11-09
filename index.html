@@ -38,10 +38,10 @@
 		>
 			<div
 				id="titleDiv"
-				class="mt-5 col col-md-6 h-auto d-flex flex-column align-items-center"
+				class="mt-5 col col-md-5 h-auto d-flex flex-column align-items-center"
 			>
 				<header id="nameCard" class="col text-center">
-					<h1>Kevin Turley</h1>
+					<h1 class="">Kevin Turley</h1>
 					<h4>Full Stack Web Developer</h4>
 					<p>
 						I am a passionate, self-taught web developer with a strong
@@ -50,19 +50,22 @@
 				</header>
 				<ul id="navList" class="list-group col d-none d-md-block p-4">
 					<li class="list-group-item text-right">
-						<span>---------------</span>
-						<span>ABOUT</span>
-						<span>---</span>
+						<!-- <span>---------------</span> -->
+						<i class="fas fa-angle-double-right"></i>
+						<span>ABOUT ME</span>
+						<!-- <span>---</span> -->
 					</li>
-					<li class="list-group-item text-right">
-						<span>---------</span>
-						<span>JS PROJECTS</span>
-						<span>---</span>
-					</li>
-					<li class="list-group-item text-right">
-						<span>----</span>
-						<span>REACT PROJECTS</span>
-						<span>---</span>
+					<a href="#js-projects">
+						<li class="list-group-item text-right">
+							<!-- <span>---------</span> -->
+							<i class="fas fa-angle-double-right"></i>
+							<span>JS PROJECTS</span>
+							<!-- <span>---</span> -->
+						</li>
+					</a>
+					<li class="list-group-item text-right disabled">
+						<i class="fas fa-angle-double-right"></i>
+						<span>REACT PROJECTS (Coming Soon!)</span>
 					</li>
 				</ul>
 				<ul class="listgroup col col-md-6 d-flex justify-content-center">
@@ -89,43 +92,120 @@
 					></a>
 				</ul>
 			</div>
-			<div id="contentDiv" class="p-5 container col col-md-6">
-				<p class="row">
-					Welcome to my portfolio website! My name is SubtleMocha, and I am a
-					passionate web developer with a strong foundation in HTML, CSS,
-					Javascript, MongoDB, Node.js and Express.js and I'm on my way towards
-					learning React, Wordpress, Typescript and PHP
-				</p>
-				<p class="row">
-					I specialize in creating dynamic and responsive web applications using
-					HTML, CSS, Javascript, MongoDB, Node.js, and Express.js. My goal is to
-					leverage my skills and expertise to secure a position as a web
-					developer, where I can contribute to building innovative and
-					user-friendly solutions.
-				</p>
-				<p class="row">
-					Please take a moment to explore my portfolio, showcasing my projects
-					and demonstrating my commitment to delivering high-quality web
-					experiences.
-				</p>
-				<p class="row">
-					welcome to my portfolio website! My name is SubtleMocha, and I am a
-					passionate web developer with a strong foundation in HTML, CSS,
-					Javascript, MongoDB, Node.js and Express.js and I'm on my way towards
-					learning React, Wordpress, Typescript and PHP
-				</p>
-				<p class="row">
-					I specialize in creating dynamic and responsive web applications using
-					HTML, CSS, Javascript, MongoDB, Node.js, and Express.js. My goal is to
-					leverage my skills and expertise to secure a position as a web
-					developer, where I can contribute to building innovative and
-					user-friendly solutions.
-				</p>
-				<p class="row">
-					Please take a moment to explore my portfolio, showcasing my projects
-					and demonstrating my commitment to delivering high-quality web
-					experiences.
-				</p>
+			<div id="contentDiv" class="m-md-5 pl-md-5 container col col-md-6">
+				<section>
+					<h2>About Me</h2>
+					<p class="row">
+						Welcome to my portfolio website! I am a passionate web developer
+						with a strong foundation in HTML, CSS, Javascript, MongoDB, Node.js
+						and Express.js and I'm on my way towards learning React, Wordpress,
+						Typescript and PHP
+					</p>
+					<p class="row">
+						I specialize in creating dynamic and responsive web applications
+						using HTML, CSS, Javascript, MongoDB, Node.js and Express.js. My
+						goal is to leverage my skills and expertise to secure a position as
+						a web developer, where I can contribute to building innovative and
+						user-friendly solutions.
+					</p>
+					<p class="row">
+						Please take a moment to explore my portfolio, showcasing my projects
+						and demonstrating my commitment to delivering high-quality web
+						experiences.
+					</p>
+				</section>
+				<section id="js-projects">
+					<ul id="jsList" class="container px-0 py-md-4">
+						<h2>JavaScript Projects</h2>
+						<li
+							class="card p-3 py-5 my-5 projectCard d-flex align-items-center text-center"
+						>
+							<a href="./javascript_projects/grocery_list/index.html" class=""
+								><h3>Grocery List</h3>
+								<img
+									class="img-fluid my-3"
+									src="./public/images/GroceryList.png"
+									alt="grocery app"
+								/>
+							</a>
+							<p>
+								Introducing our seamless grocery list builder, designed to
+								streamline your shopping experience with elegance. Our web app
+								empowers you to curate your list effortlessly. Add staple items
+								with a single click, and include unique additions seamlessly.
+								Enjoy the freedom to rearrange and remove items at your
+								convenience, maintaining full control. With local storage,
+								confidently close and reopen the page without losing your list.
+								Embrace the convenience of our grocery list builder, where
+								efficiency meets sophistication, simplifying your shopping with
+								grace.
+							</p>
+							<div class="w-100 d-flex flex-wrap justify-content-around">
+								<i class="fab fa-js text-center"> Javascript</i>
+								<i class="fab fa-html5 text-center"> HTML</i>
+								<i class="fab fa-css3 text-center"> CSS</i>
+								<!-- <i class="fab fa-node-js text-center"> NODE.JS</i> -->
+							</div>
+						</li>
+						<li
+							class="card p-3 py-5 my-5 projectCard d-flex align-items-center text-center"
+						>
+							<a href="./javascript_projects/brewery_site/index.html" class=""
+								><h3>Brewery Page</h3>
+								<img
+									class="img-fluid my-3"
+									src="./public/images/Brewery.png"
+									alt="grocery app"
+								/>
+							</a>
+							<p>
+								Step into Aesop's Tables, an immersive webpage embodying the
+								essence of a fictional local brewery. Explore our elegant
+								website, where finely crafted beer and delectable cuisine await.
+								Indulge in a seamless pop-up menu, savoring tantalizing
+								offerings. Simplify your visit with a convenient reservation
+								form. Experience the visual delight of CSS parallax effects,
+								enhancing your browsing experience. Aesop's Tables invites you
+								to embark on a harmonious journey through brewing and culinary
+								excellence.
+							</p>
+							<div class="w-100 d-flex flex-wrap justify-content-around">
+								<i class="fab fa-js text-center"> Javascript</i>
+								<i class="fab fa-html5 text-center"> HTML</i>
+								<i class="fab fa-css3 text-center"> CSS</i>
+								<!-- <i class="fab fa-node-js text-center"> NODE.JS</i> -->
+							</div>
+						</li>
+						<li
+							class="card p-3 my-5 py-5 projectCard d-flex align-items-center text-center"
+						>
+							<a href="./javascript_projects/codenames/index.html" class=""
+								><h3>Codenames</h3>
+								<img
+									class="img-fluid my-3"
+									src="./public/images/Codenames.png"
+									alt="grocery app"
+								/>
+							</a>
+							<p>
+								Immerse yourself in the captivating world of Codenames with our
+								JavaScript-powered web app. Experience the thrill of uncovering
+								hidden cards with the click of a "SPY" button, revealing the
+								secrets that lie beneath. Stay engaged and motivated as the
+								score updates in real-time, keeping you on the edge of your seat
+								throughout the game. Whether you're a seasoned player or new to
+								the world of Codenames, our app offers an immersive and dynamic
+								experience that will keep you coming back for more.
+							</p>
+							<div class="w-100 d-flex flex-wrap justify-content-around">
+								<i class="fab fa-js text-center"> Javascript</i>
+								<i class="fab fa-html5 text-center"> HTML</i>
+								<i class="fab fa-css3 text-center"> CSS</i>
+								<!-- <i class="fab fa-node-js text-center"> NODE.JS</i> -->
+							</div>
+						</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 	</body>

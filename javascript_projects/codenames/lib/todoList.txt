@@ -1,0 +1,48 @@
+- allow spymaster to input number of guesses 
+DONE - enable spy mode by revealing all cards
+- fix word list to fit dynamically on the screen
+- mobile friendly
+- accessibility
+
+- build turn feature
+DONE -- know when death has been selected
+DONE --- create a death sequence
+---- make death sequence cool
+
+DONE - prevent NEW GAME if there are < 2 players per team
+
+- build turn feature
+DONE 0) a) let players select which team they're on (or assign automatically)
+   b) prevent non-turn team from touching cards
+DONE - 1) get which team has most cards at start
+2) add a prompt for the team's turn
+DONE -  highlight who's turn it is
+  ask spy for number of guesses with input, limit turns to guesses + 1
+
+DONE 3) if non-red card touched, and it's NOT the assassin, end turn, run 2)
+DONE    if 'END TURN' button pressed, end turn, run 2
+DONE 4) if assassin, show assassin prompt, then whichever team won
+DONE 5) determine winner, award round point
+
+for turns:
+DONE - each user inputs name, add player names to a list
+DONE - get ip? or something to identify who does things like touch cards, hits spymaster, etc. GAVE AN ID BASED ON CURRENT TIME
+
+ONLINE PLAY
+-allow players from elsewhere join and play the game (ABLY, PUBNUB, etc?)
+-this should allow assigning ID for each player
+-integrate into who clicks on cards (and their team), who is the spy master, prevent more than one SM per team, track score
+
+EXTRAS:
+-timer
+
+inputting # of guesses
+add 'numGuesses' key to the gameState and endTurn() when numGuesses = 0
+ask other spymaster to put a number of guesses, set numGuesses to input
+
+create playerState
+{
+  team: "red/blue"
+  turn: true/false,
+}
+if turn = false, remove all card clickability

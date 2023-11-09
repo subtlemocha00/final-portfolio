@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
+
+:root {
+  --main-font-family: Arial, Helvetica, sans-serif;
+  /* --main-font-family: "Kalam", cursive; */
+  /* font sizes */
+  --font-20: 20px;
+  --font-30: 30px;
+  --font-40: 40px;
+  --font-50: 50px;
+  --font-60: 60px;
+  /* colours */
+  --main-font-color: rgb(153, 255, 191);
+  --empty-font-color: rgba(50, 0, 143, 0.7);
+  --button-font-color: rgb(18, 18, 20);
+  --board-edge-color: rgb(85, 240, 80);
+  --opt1-color: linear-gradient(rgb(103, 172, 0), rgb(237, 255, 218));
+  --opt2-color: linear-gradient(rgb(47, 172, 255), rgb(212, 254, 255));
+  --opt3-color: linear-gradient(rgb(255, 72, 72), rgb(255, 219, 219));
+  --opt4-color: linear-gradient(rgb(255, 215, 72), rgb(255, 219, 219));
+  --hover-color: rgb(255, 255, 34);
+  --hover-txt-color: orange;
+  --check-yes-color: rgb(231, 221, 75);
+  --delete-item-color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  /* background: url('https://www.desktopbackground.org/p/2014/01/06/696987_wallpapers-plain-images-heritage-outdoors-bulletin-board-800x600_800x600_h.gif'); */
+}
+
+ul {
+  list-style: none;
+}
+
+.userInterface,
+.sideInterface {
+  font-family: var(--main-font-family);
+  font-size: var(--font-40);
+  color: var(--main-font-color);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textInput {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0em 0.5em;
+  background: inherit;
+  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
+  color: var(--main-font-color);
+}
+
+.listContainer,
+.sideListContainer {
+  border: 2px solid var(--board-edge-color);
+  /* background: linear-gradient(135deg, */
+      /* rgb(187, 199, 221) 65%,
+      rgb(203, 205, 207)); */
+  /* margin: 0.5em; */
+  text-shadow: 4px 2px 4px rgb(131, 141, 233);
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.493),
+    1px 1px 1px 1px var(--board-edge-color),
+    inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.item:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+.item span {
+  flex-grow: 1;
+  /* padding: 0 1em; */
+}
+
+.itemButton {
+  /* font-family: inherit; */
+  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid var(--main-font-color);
+  text-shadow: 4px 2px 4px rgb(131, 141, 233);
+  padding: 14px;
+  margin: 0 0.5em;
+  width: var(--font-30);
+  height: var(--font-30);
+  border-radius: 25%;
+  box-shadow: 4px 2px 4px rgb(131, 141, 233);
+}
+
+.checkBox::before {
+  content: "✓";
+  font-size: var(--font-50);
+  display: none;
+  color: var(--check-yes-color);
+}
+
+.done .checkBox::before {
+  display: inline;
+}
+
+.done span {
+  text-decoration: line-through;
+}
+
+.delete {
+  color: var(--delete-item-color);
+  font-size: var(--font-20);
+}
+
+*:focus {
+  outline: none;
+}
+
+.itemButton:hover {
+  border-color: orange;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.button {
+  font-size: var(--font-40);
+  font-family: inherit;
+  color: inherit;
+  margin: 0.25em 0.5em;
+  background-color: inherit;
+  /* padding: 0.25em 0.5em; */
+  border: 2px solid var(--board-edge-color);
+}
+
+.textInput,
+.button {
+  /* border-radius: 25% 25% 25% 25%; */
+}
+
+.add {
+  /* background: var(--opt1-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(53, 78, 15),
+    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.staples {
+  /* background: var(--opt2-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(15, 58, 78),
+    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
+  }
+
+.clear {
+  /* background: var(--opt3-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(105, 29, 29), */
+    /* 3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
+  }
+.save {
+  /* background: var(--opt4-color); */
+  /* box-shadow: 2px 4px 1px 2px rgb(15, 58, 78),
+    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
+
+}
+
+.button:hover {
+  background: orange;
+  /* box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
+    7px 7px 10px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.fa-list-alt {
+  font-size: var(--font-60);
+  margin-top: 10px;
+}
+
+.empty-state {
+  display: none;
+  color: var(--main-font-color);
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+#list:empty {
+  display: none;
+}
+
+#list:empty+.empty-state {
+  display: flex;
+}
+
+
+.draggable {
+  /* background-color: rgb(255, 230, 1); */
+  /* padding: 1rem; */
+  /* border: 3px solid rgb(0, 183, 255); */
+  /* border-radius: 15px; */
+  cursor: move;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+}
+
+/* add mobile responsiveness */
+@media only screen and (max-width: 550px) {
+  :root {
+    --font-20: 10px;
+    --font-30: 15px;
+    --font-40: 20px;
+    --font-50: 25px;
+    --font-60: 30px;
+  }
+
+  .itemButton {
+    padding: 5px;
+  }
+}
