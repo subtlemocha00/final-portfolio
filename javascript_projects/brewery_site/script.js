@@ -107,7 +107,7 @@ foodList.forEach((item) => {
 	const menuItem = document.createElement("div");
 	menuItem.classList.add("menuItem", "item");
 	menuItem.innerHTML = `
-    <img src="${item.image}" alt="${item.image}" class="menuImg img-fluid img-thumbnail w-50" />
+    <img src="${item.image}" alt="${item.image}" class="menuImg img-fluid img-thumbnail w-75" />
     <span class="itemName">${item.name}</span>
     <span class="itemPrice">${item.price}</span>
     <span class="itemDesc">${item.description}</span>
