@@ -33,12 +33,6 @@ body {
     background-color: var(--colorB);
     color: var(--colorD);
 }
-#mainContainer {
-}
-#navList {
-}
-#nameCard {
-}
 #jsList {
     /* background-color: var(--colorB); */
     color: var(--colorD);
