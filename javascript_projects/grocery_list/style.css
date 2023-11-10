@@ -4,7 +4,6 @@
 
 :root {
   --main-font-family: Arial, Helvetica, sans-serif;
-  /* --main-font-family: "Kalam", cursive; */
   /* font sizes */
   --font-20: 20px;
   --font-30: 30px;
@@ -34,18 +33,20 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  /* background: url('https://www.desktopbackground.org/p/2014/01/06/696987_wallpapers-plain-images-heritage-outdoors-bulletin-board-800x600_800x600_h.gif'); */
 }
 
 ul {
   list-style: none;
 }
+.groceryList {
+  margin: 0;
+  /* width: 100%; */
+}
 
 .userInterface,
 .sideInterface {
   font-family: var(--main-font-family);
-  font-size: var(--font-40);
+  font-size: var(--font-50);
   color: var(--main-font-color);
 }
 
@@ -62,19 +63,6 @@ ul {
   background: inherit;
   box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
   color: var(--main-font-color);
-}
-
-.listContainer,
-.sideListContainer {
-  border: 2px solid var(--board-edge-color);
-  /* background: linear-gradient(135deg, */
-      /* rgb(187, 199, 221) 65%,
-      rgb(203, 205, 207)); */
-  /* margin: 0.5em; */
-  text-shadow: 4px 2px 4px rgb(131, 141, 233);
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.493),
-    1px 1px 1px 1px var(--board-edge-color),
-    inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
 }
 
 .item {
@@ -157,35 +145,6 @@ ul {
   border: 2px solid var(--board-edge-color);
 }
 
-.textInput,
-.button {
-  /* border-radius: 25% 25% 25% 25%; */
-}
-
-.add {
-  /* background: var(--opt1-color); */
-  /* box-shadow: 2px 4px 1px 2px rgb(53, 78, 15),
-    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
-}
-
-.staples {
-  /* background: var(--opt2-color); */
-  /* box-shadow: 2px 4px 1px 2px rgb(15, 58, 78),
-    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
-  }
-
-.clear {
-  /* background: var(--opt3-color); */
-  /* box-shadow: 2px 4px 1px 2px rgb(105, 29, 29), */
-    /* 3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
-  }
-.save {
-  /* background: var(--opt4-color); */
-  /* box-shadow: 2px 4px 1px 2px rgb(15, 58, 78),
-    3px 3px 10px 10px rgba(0, 0, 0, 0.5); */
-
-}
-
 .button:hover {
   background: orange;
   /* box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
@@ -202,8 +161,8 @@ ul {
   color: var(--main-font-color);
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding: 20px;
+  font-size: var(--font-60);
 }
 
 #list:empty {
@@ -216,10 +175,6 @@ ul {
 
 
 .draggable {
-  /* background-color: rgb(255, 230, 1); */
-  /* padding: 1rem; */
-  /* border: 3px solid rgb(0, 183, 255); */
-  /* border-radius: 15px; */
   cursor: move;
 }
 
@@ -240,4 +195,15 @@ ul {
   .itemButton {
     padding: 5px;
   }
+  .groceryList {
+    padding: 2px;
+  }
+  li.item {
+    padding: 15px;
+    margin: 2px;
+    border: 2px solid var(--board-edge-color);
+  }
+  /* .empty-state {
+    font-size: var(--font-60);
+  } */
 }

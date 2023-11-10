@@ -28,8 +28,8 @@
   --font-shadow-title: 3px 4px 15px rgb(0, 0, 0), -3px 4px 15px rgb(0, 0, 0);
   --font-shadow-city: 3px 3px 10px rgb(0, 0, 0), -3px 3px 10px rgb(0, 0, 0);
   --font-shadow-logo: 3px 3px 10px rgb(255, 220, 103), -3px 3px 10px rgb(255, 220, 103);
-  --font-shadow-h1: 3px 15px 15px rgb(117, 117, 117),
-    -1px 1px rgb(71, 60, 22);
+  --font-shadow-h1: 3px 15px 15px rgba(238, 255, 153, .5),
+    -1px 1px rgb(244, 191, 0);
   --box-shadow: rgba(255, 220, 103, 0.5);
   --box-shadow-close: 0px 5px 5px 2px rgba(0, 0, 0, 0.75);
 }
@@ -153,6 +153,10 @@ h2 {
 
 .companyText {
   width: 85%;
+}
+
+.sectionTitle {
+  text-align: center;
 }
 
 .phoneNumber {
@@ -434,7 +438,10 @@ footer:hover {
     max-width: 95vw;
   }
   .companyText {
-    font-size: .75em;
+    /* font-size: .75em; */
+  }
+  .productsContainer {
+    width: 120%;
   }
 
   .productText {
@@ -442,7 +449,7 @@ footer:hover {
     margin: .25em;
   }
   .sectionTitle {
-    font-size: 1.5em;
+    margin-bottom: 1.5rem;
   }
   .productItem {
     flex-direction: column;
@@ -465,10 +472,13 @@ footer:hover {
   }
 
   .companyText {
-    width: 100%;
+    width: 110%;
     /* font-size: .5em; */
   }
 
+  .productCont {
+    margin: 5px;
+  }
   .productText {
     margin: .25em;
   }
