@@ -10,6 +10,7 @@
   --font-40: 40px;
   --font-50: 50px;
   --font-60: 60px;
+  font-size: 10px;
   /* colours */
   --main-font-color: rgb(153, 255, 191);
   --empty-font-color: rgba(50, 0, 143, 0.7);
@@ -30,9 +31,10 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   display: flex;
   flex-direction: column;
+overflow-x: hidden;
 }
 
 ul {
@@ -43,10 +45,9 @@ ul {
   /* width: 100%; */
 }
 
-.userInterface,
-.sideInterface {
+.userInterface {
   font-family: var(--main-font-family);
-  font-size: var(--font-50);
+  font-size: 5rem;
   color: var(--main-font-color);
 }
 
@@ -54,6 +55,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100vw;
 }
 
 .textInput {
@@ -63,13 +65,14 @@ ul {
   background: inherit;
   box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
   color: var(--main-font-color);
+  max-width: 100vw;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin: 0;
+  /* margin: 10px; */
   padding: 0 10px;
 }
 
@@ -102,7 +105,7 @@ ul {
 
 .checkBox::before {
   content: "✓";
-  font-size: var(--font-50);
+  font-size: 5rem;
   display: none;
   color: var(--check-yes-color);
 }
@@ -136,23 +139,23 @@ ul {
 }
 
 .button {
-  font-size: var(--font-40);
+  font-size: 4rem;
   font-family: inherit;
   color: inherit;
   margin: 0.25em 0.5em;
   background-color: inherit;
-  /* padding: 0.25em 0.5em; */
+  padding: 0.2em 0.2em;
   border: 2px solid var(--board-edge-color);
 }
 
 .button:hover {
   background: orange;
-  /* box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
-    7px 7px 10px 10px rgba(0, 0, 0, 0.5); */
+  box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
+    7px 7px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .fa-list-alt {
-  font-size: var(--font-60);
+  font-size: 6rem;
   margin-top: 10px;
 }
 
@@ -162,7 +165,7 @@ ul {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  font-size: var(--font-60);
+  font-size: 6rem;
 }
 
 #list:empty {
@@ -184,26 +187,28 @@ ul {
 
 /* add mobile responsiveness */
 @media only screen and (max-width: 550px) {
-  :root {
-    --font-20: 10px;
-    --font-30: 15px;
-    --font-40: 20px;
-    --font-50: 25px;
-    --font-60: 30px;
-  }
-
-  .itemButton {
+.userInterface {
+  font-family: var(--main-font-family);
+  font-size: 3rem;
+  color: var(--main-font-color);
+}
+  .itemButton { 
     padding: 5px;
   }
   .groceryList {
     padding: 2px;
+    font-size: 3rem;
   }
   li.item {
     padding: 15px;
     margin: 2px;
     border: 2px solid var(--board-edge-color);
   }
-  /* .empty-state {
-    font-size: var(--font-60);
-  } */
+  .itemButton {
+    width: 3rem;
+    height: 3rem;
+  }
+  .empty-state {
+    font-size: 3rem;
+  }
 }
