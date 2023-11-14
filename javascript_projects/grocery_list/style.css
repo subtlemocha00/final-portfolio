@@ -42,7 +42,6 @@ ul {
 }
 .groceryList {
   margin: 0;
-  /* width: 100%; */
 }
 
 .userInterface {
@@ -65,14 +64,13 @@ ul {
   background: inherit;
   box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
   color: var(--main-font-color);
-  max-width: 100vw;
+  max-width: 90vw;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  /* margin: 10px; */
   padding: 0 10px;
 }
 
@@ -83,11 +81,9 @@ ul {
 
 .item span {
   flex-grow: 1;
-  /* padding: 0 1em; */
 }
 
 .itemButton {
-  /* font-family: inherit; */
   vertical-align: middle;
   display: inline-flex;
   justify-content: center;
@@ -97,8 +93,8 @@ ul {
   text-shadow: 4px 2px 4px rgb(131, 141, 233);
   padding: 14px;
   margin: 0 0.5em;
-  width: var(--font-30);
-  height: var(--font-30);
+  width: 3rem;
+  height: 3rem;
   border-radius: 25%;
   box-shadow: 4px 2px 4px rgb(131, 141, 233);
 }
@@ -150,8 +146,8 @@ ul {
 
 .button:hover {
   background: orange;
-  box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
-    7px 7px 10px 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
+    7px 7px 10px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .fa-list-alt {
@@ -196,13 +192,17 @@ ul {
     padding: 5px;
   }
   .groceryList {
-    padding: 2px;
+    /* padding: 2px; */
     font-size: 3rem;
+    margin-left: 40px;
   }
   li.item {
-    padding: 15px;
-    margin: 2px;
+    /* padding: 5px; */
+    margin: 12px 0;
     border: 2px solid var(--board-edge-color);
+  }
+  .item {
+    padding: 0 0;
   }
   .itemButton {
     width: 3rem;
