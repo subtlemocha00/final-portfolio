@@ -101,6 +101,7 @@
 		</nav>
 		<!-- MAIN BODY -->
 		<div
+			id="bodyDiv"
 			class="container d-flex col-6 align-content-center justify-content-center mt-4"
 		>
 			<div
@@ -108,6 +109,7 @@
 			>
 				<form autocomplete="off" id="myForm" class="form">
 					<label for="userInput">Add Item:</label>
+
 					<input
 						id="userInput"
 						class="textInput"
@@ -125,21 +127,13 @@
 						<button id="clearButton" class="button clear" type="button">
 							Clear All
 						</button>
-						<!-- <input
-							id="saveButton"
-							class="button save"
-							type="submit"
-							value="SAVE"
-						/> -->
 					</div>
 				</form>
-				<!-- <div class="listContainer"> -->
 				<ul id="list" class="groceryList container p-sm-4"></ul>
 				<div class="empty-state">
 					<span>Add some stuff...</span>
 					<i class="far fa-list-alt"></i>
 				</div>
-				<!-- </div> -->
 			</div>
 		</div>
 

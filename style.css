@@ -1,81 +1,105 @@
 /* control font attributes here */
 :root {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    color: black;
-/* use a 60-30-10 rule with color scheme */
---colorA: #364483;
---colorB: #1A253D;
---colorC: #3d70c7;
-/* --colorC: #C77A3D; */
---colorD: #2664BE;
---colorE: #55f050;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: black;
+	--colorA: #364483;
+	--colorB: #1a253d;
+	--colorC: #3d70c7;
+	--colorCFaded: #3d70c77b;
+	--colorD: #2664be;
+	--colorE: #55f050;
+	--colorJS: #f0db4f;
+	--colorCSS: #2965f1;
+	--colorHTML: #f06529;
+	--colorNODE: #3c873a;
+}
+body {
+	color: var(--colorD);
+	background: linear-gradient(35deg, var(--colorB), 90%, rgb(45, 54, 97));
+	background-attachment: fixed;
+}
+a,
+a:hover {
+	color: inherit;
+	text-decoration: none;
 }
 
-a, a:hover {
-    color: inherit;
-    text-decoration: none;   
-}
-
-ul, li {
-    list-style: none;
-    color: inherit;
+ul,
+li {
+	list-style: none;
+	color: inherit;
 }
 
 .lg-text {
-    font-size: 2em;
+	font-size: 2em;
 }
 
 i.instagram-icon {
-        color: #fac71e ;
-}
-body {
-    background-color: var(--colorB);
-    color: var(--colorD);
+	color: #fac71e;
 }
 #jsList {
-    /* background-color: var(--colorB); */
-    color: var(--colorD);
+	background: transparent;
+	color: var(--colorD);
 }
 
 .projectCard {
-    color: var(--colorD);
-    background-color: var(--colorB);
-    border-color: var(--colorC);
+	/* background: linear-gradient(to right, var(--colorB), white); */
+	color: var(--colorD);
+	background-color: transparent;
+	border: 1px solid var(--colorCFaded);
+}
+.projectLink {
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	padding: 1rem;
+}
+.projectLink:hover {
+	border: 1px solid var(--colorE);
 }
 
 ul#navList li {
-    background-color: var(--colorB);
-    color: var(--colorD);
-    border: none;
+	background-color: var(--colorB);
+	color: var(--colorD);
+	border: none;
 }
 ul#navList li:hover {
-    /* background-color: var(--colorD); */
-    color: var(--colorC);
+	/* background-color: var(--colorD); */
+	color: var(--colorC);
 }
 .navbar {
-    background-color: var(--colorA) !important;
+	background-color: var(--colorA) !important;
 }
-.nav-link, .nav-underline, .navbar-nav {
-    color: var(--colorE) !important;
-    
+.nav-link,
+.nav-underline,
+.navbar-nav {
+	color: var(--colorE) !important;
 }
-ul.dropdown-menu, .dropdown-item {
-    background-color: var(--colorA);
-    color: var(--colorE) !important;
-
+ul.dropdown-menu,
+.dropdown-item {
+	background-color: var(--colorA);
+	color: var(--colorE) !important;
 }
 .dropdown-item:hover {
-    background-color: var(--colorC);
+	background-color: var(--colorC);
+}
+.htmlLogo {
+	color: var(--colorHTML);
+}
+.cssLogo {
+	color: var(--colorCSS);
+}
+.jsLogo {
+	color: var(--colorJS);
 }
 
 @media (min-width: 768px) {
-    #titleDiv {
-        position: fixed;
-    }
-    #contentDiv {
-        position:  absolute;
-        right: 0;
-        border-left: 1px solid var(--colorD);
-    }
+	#titleDiv {
+		position: fixed;
+	}
+	#contentDiv {
+		position: absolute;
+		right: 0;
+		border-left: 1px solid var(--colorD);
+	}
 }

@@ -3,207 +3,210 @@
 @import url("https://fonts.googleapis.com/css2?family=Kalam&display=swap");
 
 :root {
-  --main-font-family: Arial, Helvetica, sans-serif;
-  /* font sizes */
-  --font-20: 20px;
-  --font-30: 30px;
-  --font-40: 40px;
-  --font-50: 50px;
-  --font-60: 60px;
-  /* colours */
-  --main-font-color: rgb(153, 255, 191);
-  --empty-font-color: rgba(50, 0, 143, 0.7);
-  --button-font-color: rgb(18, 18, 20);
-  --board-edge-color: rgb(85, 240, 80);
-  --opt1-color: linear-gradient(rgb(103, 172, 0), rgb(237, 255, 218));
-  --opt2-color: linear-gradient(rgb(47, 172, 255), rgb(212, 254, 255));
-  --opt3-color: linear-gradient(rgb(255, 72, 72), rgb(255, 219, 219));
-  --opt4-color: linear-gradient(rgb(255, 215, 72), rgb(255, 219, 219));
-  --hover-color: rgb(255, 255, 34);
-  --hover-txt-color: orange;
-  --check-yes-color: rgb(231, 221, 75);
-  --delete-item-color: red;
+	--main-font-family: Arial, Helvetica, sans-serif;
+	/* font sizes */
+	font-size: 10px;
+	/* colours */
+	--main-font-color: rgb(153, 255, 191);
+	--empty-font-color: rgba(50, 0, 143, 0.7);
+	--button-font-color: rgb(18, 18, 20);
+	--board-edge-color: rgb(85, 240, 80);
+	--opt1-color: linear-gradient(rgb(103, 172, 0), rgb(237, 255, 218));
+	--opt2-color: linear-gradient(rgb(47, 172, 255), rgb(212, 254, 255));
+	--opt3-color: linear-gradient(rgb(255, 72, 72), rgb(255, 219, 219));
+	--opt4-color: linear-gradient(rgb(255, 215, 72), rgb(255, 219, 219));
+	--hover-color: rgb(255, 255, 34);
+	--hover-txt-color: orange;
+	--check-yes-color: rgb(231, 221, 75);
+	--delete-item-color: red;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0px;
-  display: flex;
-  flex-direction: column;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+.navbar {
+	font-size: 1.6rem;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 .groceryList {
-  margin: 0;
-  /* width: 100%; */
+	margin: 0;
 }
 
-.userInterface,
-.sideInterface {
-  font-family: var(--main-font-family);
-  font-size: var(--font-50);
-  color: var(--main-font-color);
+.userInterface {
+	font-family: var(--main-font-family);
+	font-size: 5rem;
+	color: var(--main-font-color);
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 100vw;
 }
 
 .textInput {
-  font-size: inherit;
-  font-family: inherit;
-  padding: 0em 0.5em;
-  background: inherit;
-  box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
-  color: var(--main-font-color);
+	font-size: inherit;
+	font-family: inherit;
+	padding: 0em 0.5em;
+	background: inherit;
+	box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.582);
+	color: var(--main-font-color);
+	max-width: 90vw;
 }
 
 .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin: 0;
-  padding: 0 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	padding: 0 10px;
 }
 
 .item:hover {
-  cursor: pointer;
-  color: orange;
+	cursor: pointer;
+	color: orange;
 }
 
 .item span {
-  flex-grow: 1;
-  /* padding: 0 1em; */
+	flex-grow: 1;
 }
 
 .itemButton {
-  /* font-family: inherit; */
-  vertical-align: middle;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 3px solid var(--main-font-color);
-  text-shadow: 4px 2px 4px rgb(131, 141, 233);
-  padding: 14px;
-  margin: 0 0.5em;
-  width: var(--font-30);
-  height: var(--font-30);
-  border-radius: 25%;
-  box-shadow: 4px 2px 4px rgb(131, 141, 233);
+	vertical-align: middle;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border: 3px solid var(--main-font-color);
+	text-shadow: 4px 2px 4px rgb(131, 141, 233);
+	padding: 14px;
+	margin: 0 0.5em;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 25%;
+	box-shadow: 4px 2px 4px rgb(131, 141, 233);
 }
 
 .checkBox::before {
-  content: "✓";
-  font-size: var(--font-50);
-  display: none;
-  color: var(--check-yes-color);
+	content: "✓";
+	font-size: 5rem;
+	display: none;
+	color: var(--check-yes-color);
 }
 
 .done .checkBox::before {
-  display: inline;
+	display: inline;
 }
 
 .done span {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 .delete {
-  color: var(--delete-item-color);
-  font-size: var(--font-20);
+	color: var(--delete-item-color);
+	font-size: var(--font-20);
 }
 
 *:focus {
-  outline: none;
+	outline: none;
 }
 
 .itemButton:hover {
-  border-color: orange;
+	border-color: orange;
 }
 
 .buttonContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1rem;
 }
 
 .button {
-  font-size: var(--font-40);
-  font-family: inherit;
-  color: inherit;
-  margin: 0.25em 0.5em;
-  background-color: inherit;
-  /* padding: 0.25em 0.5em; */
-  border: 2px solid var(--board-edge-color);
+	font-size: 4rem;
+	font-family: inherit;
+	color: inherit;
+	margin: 0.25em 0.5em;
+	background-color: inherit;
+	padding: 0.2em 0.2em;
+	border: 2px solid var(--board-edge-color);
 }
 
 .button:hover {
-  background: orange;
-  /* box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
+	background: orange;
+	/* box-shadow: 2px 4px 1px 2px rgb(155, 155, 0),
     7px 7px 10px 10px rgba(0, 0, 0, 0.5); */
 }
 
 .fa-list-alt {
-  font-size: var(--font-60);
-  margin-top: 10px;
+	font-size: 6rem;
+	margin-top: 10px;
 }
 
 .empty-state {
-  display: none;
-  color: var(--main-font-color);
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-size: var(--font-60);
+	display: none;
+	color: var(--main-font-color);
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	font-size: 6rem;
 }
 
 #list:empty {
-  display: none;
+	display: none;
 }
 
-#list:empty+.empty-state {
-  display: flex;
+#list:empty + .empty-state {
+	display: flex;
 }
-
 
 .draggable {
-  cursor: move;
+	cursor: move;
 }
 
 .draggable.dragging {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 /* add mobile responsiveness */
 @media only screen and (max-width: 550px) {
-  :root {
-    --font-20: 10px;
-    --font-30: 15px;
-    --font-40: 20px;
-    --font-50: 25px;
-    --font-60: 30px;
-  }
-
-  .itemButton {
-    padding: 5px;
-  }
-  .groceryList {
-    padding: 2px;
-  }
-  li.item {
-    padding: 15px;
-    margin: 2px;
-    border: 2px solid var(--board-edge-color);
-  }
-  /* .empty-state {
-    font-size: var(--font-60);
-  } */
+	.userInterface {
+		font-family: var(--main-font-family);
+		font-size: 3rem;
+		color: var(--main-font-color);
+	}
+	.itemButton {
+		padding: 5px;
+	}
+	.groceryList {
+		/* padding: 2px; */
+		font-size: 3rem;
+		margin-left: 40px;
+	}
+	li.item {
+		/* padding: 5px; */
+		margin: 12px 0;
+		border: 2px solid var(--board-edge-color);
+	}
+	.item {
+		padding: 0 0;
+	}
+	.itemButton {
+		width: 3rem;
+		height: 3rem;
+	}
+	.empty-state {
+		font-size: 3rem;
+	}
 }
