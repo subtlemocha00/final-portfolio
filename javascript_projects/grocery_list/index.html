@@ -108,13 +108,13 @@
 				class="userInterface row d-flex justify-content-center align-items-center"
 			>
 				<form autocomplete="off" id="myForm" class="form">
-					<label for="userInput">Add Item:</label>
+					<label for="userInput" style="display: none">Add Item:</label>
 
 					<input
 						id="userInput"
 						class="textInput"
 						type="text"
-						placeholder="..."
+						placeholder="Item..."
 						autofocus="autofocus"
 					/>
 					<div class="buttonContainer">
@@ -129,7 +129,7 @@
 						</button>
 					</div>
 				</form>
-				<ul id="list" class="groceryList container p-sm-4"></ul>
+				<ul id="list" class="groceryList container ms-5 p-sm-4"></ul>
 				<div class="empty-state">
 					<span>Add some stuff...</span>
 					<i class="far fa-list-alt"></i>
