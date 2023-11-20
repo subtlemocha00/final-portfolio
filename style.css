@@ -31,8 +31,8 @@ li {
 	color: inherit;
 }
 
-.lg-text {
-	font-size: 2em;
+section p {
+	text-align: justify;
 }
 
 i.instagram-icon {
