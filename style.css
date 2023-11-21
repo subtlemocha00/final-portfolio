@@ -5,10 +5,12 @@
 	color: black;
 	--colorA: #364483;
 	--colorB: #1a253d;
+	--colorBFaded: #2d3661;
 	--colorC: #3d70c7;
 	--colorCFaded: #3d70c77b;
 	--colorD: #2664be;
 	--colorE: #55f050;
+	--colorEFaded: #55f05066;
 	--colorJS: #f0db4f;
 	--colorCSS: #2965f1;
 	--colorHTML: #f06529;
@@ -16,7 +18,7 @@
 }
 body {
 	color: var(--colorD);
-	background: linear-gradient(35deg, var(--colorB), 90%, rgb(45, 54, 97));
+	background: linear-gradient(35deg, var(--colorB), 90%, var(--colorBFaded));
 	background-attachment: fixed;
 }
 a,
@@ -50,12 +52,18 @@ i.instagram-icon {
 	border: 1px solid var(--colorCFaded);
 }
 .projectLink {
-	border: 1px solid transparent;
 	box-sizing: border-box;
+	border: 4px solid transparent;
+	/* box-sizing: border-box; */
 	padding: 1rem;
+	transition: border 0.75s ease-in, background-color 0.75s ease-in;
 }
 .projectLink:hover {
-	border: 1px solid var(--colorE);
+	border-bottom: 4px solid var(--colorB);
+	border-left: 4px solid var(--colorB);
+	border-top: 4px solid var(--colorBFaded);
+	border-right: 4px solid var(--colorBFaded);
+	background-color: rgba(255, 255, 255, 0.05);
 }
 
 ul#navList li {
@@ -64,6 +72,7 @@ ul#navList li {
 	border: none;
 }
 ul#navList li:hover {
+	cursor: pointer;
 	/* background-color: var(--colorD); */
 	color: var(--colorC);
 }
