@@ -1,14 +1,14 @@
 // import { useState } from "react";
+import Header from "./Header";
 import "./App.css";
 
 function App() {
 	return (
-		<>
-			{/* <Header /> */}
+		<div className="container">
+			<Header />
 			{/* <TodaysWeather /> */}
-			{/* < /> */}
-			<h1>SkyScape Weather</h1>
-		</>
+			{/* <Hourly /> */}
+		</div>
 	);
 }
 
