@@ -4,7 +4,10 @@ import "./App.css";
 function App() {
 	return (
 		<>
-			<h1>Weather at a Glance</h1>
+			{/* <Header /> */}
+			{/* <TodaysWeather /> */}
+			{/* < /> */}
+			<h1>SkyScape Weather</h1>
 		</>
 	);
 }
