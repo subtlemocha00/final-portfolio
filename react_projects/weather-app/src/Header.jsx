@@ -1,7 +1,7 @@
 export default function Header() {
 	return (
 		<section className="p-3 bg-secondary text-center text-warning">
-			<h3>SkyScape</h3>
+			<h3>Weather For You</h3>
 			<div className="input-group p-3 bg-secondary m-0">
 				<div className="form-outline"></div>
 				<input
