@@ -1,3 +1,40 @@
 :root {
 	font-family: Arial, Helvetica, sans-serif;
+	--bg-main-light: rgb(109, 109, 131);
+	--bg-main-dark: rgb(83, 83, 124);
+	--bg-main-blue: rgb(90, 233, 243);
+	--font-color-light: rgb(83, 83, 124);
+	--font-color-dark: rgb(255, 255, 255);
+}
+
+::placeholder {
+	color: var(--font-color-dark);
+}
+::-ms-input-placeholder {
+	/* Edge 12-18 */
+	color: var(--font-color-dark);
+}
+input:focus {
+	color: var(--font-color-dark);
+}
+
+.bg-main-blue {
+	background-color: var(--bg-main-blue);
+}
+
+.bg-main-light {
+	background-color: var(--bg-main-light);
+	color: var(--font-color-dark);
+}
+.bg-main-dark {
+	background-color: var(--bg-main-dark);
+	color: var(--font-color-light);
+}
+.bg-main-light:focus {
+	background-color: var(--bg-main-light);
+	color: var(--font-color-dark);
+}
+
+i.fa-cloud-sun-rain {
+	font-size: 1.5rem;
 }
