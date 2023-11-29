@@ -8,7 +8,7 @@
 }
 
 ::placeholder {
-	color: var(--font-color-dark);
+	color: red;
 }
 ::-ms-input-placeholder {
 	/* Edge 12-18 */
