@@ -3,19 +3,8 @@
 	--bg-main-light: rgb(109, 109, 131);
 	--bg-main-dark: rgb(83, 83, 124);
 	--bg-main-blue: rgb(90, 233, 243);
-	--font-color-light: rgb(83, 83, 124);
-	--font-color-dark: rgb(255, 255, 255);
-}
-
-::placeholder {
-	color: red;
-}
-::-ms-input-placeholder {
-	/* Edge 12-18 */
-	color: var(--font-color-dark);
-}
-input:focus {
-	color: var(--font-color-dark);
+	--font-color-light: rgb(255, 255, 255);
+	--font-color-dark: rgb(145, 145, 145);
 }
 
 .bg-main-blue {
@@ -37,4 +26,20 @@ input:focus {
 
 i.fa-cloud-sun-rain {
 	font-size: 1.5rem;
+}
+
+input,
+input:focus {
+	background-color: var(--bg-main-light);
+	color: var(--font-color-light);
+}
+::placeholder {
+	color: var(--font-color-light);
+}
+::-ms-input-placeholder {
+	color: var(--font-color-light);
+}
+
+.canvas {
+	color: white;
 }

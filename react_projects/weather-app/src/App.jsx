@@ -9,9 +9,11 @@ function App() {
 	return (
 		<div className="bg-main-dark d-flex flex-column">
 			<Header />
-			<TodaysWeather />
-			<Hourly />
-			<Weekly />
+			<section className="d-flex flex-column p-5">
+				<TodaysWeather />
+				<Hourly />
+				<Weekly />
+			</section>
 		</div>
 	);
 }
