@@ -1,9 +1,12 @@
 export default function TodaysWeather() {
 	return (
-		<div className="container">
-			<section className="row">
-				<h1 className="col-auto">70 &deg;C</h1>
-				<h4 className="col-9">London, ON</h4>
+		<div id="currentWeather" className="container">
+			<section className="row d-flex align-items-center justify-content-center">
+				<span className="col-auto">70 &deg;C</span>
+				<div className="col-auto">
+					<p className="row m-0">cloudy</p>
+					<span className="row m-0">London, ON</span>
+				</div>
 			</section>
 		</div>
 	);

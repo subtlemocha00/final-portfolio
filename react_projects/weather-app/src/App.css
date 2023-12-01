@@ -1,10 +1,41 @@
 :root {
 	font-family: Arial, Helvetica, sans-serif;
-	--bg-main-light: rgb(109, 109, 131);
-	--bg-main-dark: rgb(83, 83, 124);
+	--bg-main-light: rgb(106, 106, 124);
+	--bg-overlay-1: 106, 106, 124;
+	--bg-overlay-2: 75, 75, 90;
+	--overlay-opacity: 0.75;
+	--bg-main-dark: rgb(75, 75, 90);
 	--bg-main-blue: rgb(90, 233, 243);
 	--font-color-light: rgb(255, 255, 255);
 	--font-color-dark: rgb(145, 145, 145);
+}
+.background-container {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background-image: url("./assets/city.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.background-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(var(--bg-overlay-1), var(--overlay-opacity)),
+		rgba(var(--bg-overlay-2), var(--overlay-opacity))
+	);
+	z-index: 1;
+}
+
+.background-container > * {
+	position: relative;
+	z-index: 2;
 }
 
 .bg-main-blue {
@@ -16,7 +47,7 @@
 	color: var(--font-color-dark);
 }
 .bg-main-dark {
-	background-color: var(--bg-main-dark);
+	/* background-color: var(--bg-main-dark); */
 	color: var(--font-color-light);
 }
 .bg-main-light:focus {
@@ -40,6 +71,13 @@ input:focus {
 	color: var(--font-color-light);
 }
 
-.canvas {
-	color: white;
+#currentWeather {
+	font-family: "Orbitron", sans-serif;
+}
+
+#currentWeather > section > span {
+	font-size: 4rem;
+}
+#currentWeather > section > div > span {
+	font-size: 2rem;
 }
