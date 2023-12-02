@@ -5,7 +5,7 @@ const data = {
 			// label: "Temperature C",
 			data: [70, 68, 72, 74, 74, 73, 76, 71, 74],
 			backgroundColor: "white",
-			borderColor: "purple",
+			borderColor: "magenta",
 			borderWidth: 3,
 			tension: 0.15,
 			borderJoinStyle: "round",

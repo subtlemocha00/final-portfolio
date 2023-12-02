@@ -2,7 +2,7 @@
 import Header from "./Header";
 import Hourly from "./Hourly";
 // import "./App.css";
-import TodaysWeather from "./TodaysWeather";
+import CurrentWeather from "./CurrentWeather";
 import Weekly from "./Weekly";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 		<div className="bg-main-dark d-flex flex-column">
 			<Header />
 			<section className="d-flex flex-column p-5">
-				<TodaysWeather />
+				<CurrentWeather />
 				<Hourly />
 				<Weekly />
 			</section>

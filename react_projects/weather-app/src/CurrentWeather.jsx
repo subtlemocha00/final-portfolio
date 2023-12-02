@@ -1,4 +1,4 @@
-export default function TodaysWeather() {
+export default function CurrentWeather() {
 	return (
 		<div id="currentWeather" className="container">
 			<section className="row d-flex align-items-center justify-content-center">
