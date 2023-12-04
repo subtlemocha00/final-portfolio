@@ -58,6 +58,10 @@
 i.fa-cloud-sun-rain {
 	font-size: 1.5rem;
 }
+.btn :hover {
+	color: red;
+	background-color: yellow;
+}
 
 input,
 input:focus {

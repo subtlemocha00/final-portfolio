@@ -35,9 +35,15 @@ export default function Hourly() {
 		<div className="container d-flex flex-column justify-content-center align-items-center p-0">
 			<canvas id="hourlyGraph" className="p-2 canvas" />
 			<div className="d-flex mb-5">
-				<div className="btn btn-light mx-4">Temperature</div>
-				<div className="btn btn-light mx-4">Precipitation</div>
-				<div className="btn btn-light mx-4">Air Index</div>
+				<div className="btn mx-3 bg-transparent font-white border-0 text-light">
+					Temperature
+				</div>
+				<div className="btn mx-3 bg-transparent border-0  text-light">
+					Precipitation
+				</div>
+				<div className="btn mx-3 bg-transparent border-0 text-light">
+					Air Index
+				</div>
 			</div>
 		</div>
 	);
