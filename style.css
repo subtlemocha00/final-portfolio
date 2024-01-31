@@ -15,6 +15,7 @@
 	--colorCSS: #2965f1;
 	--colorHTML: #f06529;
 	--colorNODE: #3c873a;
+	--colorREACT: #00d8ff;
 }
 body {
 	color: var(--colorD);
@@ -56,7 +57,7 @@ i.instagram-icon {
 	border: 4px solid transparent;
 	/* box-sizing: border-box; */
 	padding: 1rem;
-	transition: border 0.75s ease-in, background-color 0.75s ease-in;
+	transition: border 0.25s ease-in, background-color 0.25s ease-in;
 }
 .projectLink:hover {
 	border-bottom: 4px solid var(--colorB);
@@ -100,6 +101,12 @@ ul.dropdown-menu,
 }
 .jsLogo {
 	color: var(--colorJS);
+}
+.reactLogo {
+	color: var(--colorREACT);
+}
+.nodeLogo {
+	color: var(--colorNODE);
 }
 
 @media (min-width: 768px) {
