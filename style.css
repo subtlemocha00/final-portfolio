@@ -1,7 +1,7 @@
 /* control font attributes here */
 :root {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: black;
 	--colorA: #364483;
 	--colorB: #1a253d;
@@ -37,7 +37,10 @@ li {
 section p {
 	text-align: justify;
 }
-
+a > i.fab,
+a > i.fas {
+	font-size: 2rem;
+}
 i.instagram-icon {
 	color: #fac71e;
 }
