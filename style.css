@@ -111,6 +111,10 @@ ul.dropdown-menu,
 .nodeLogo {
 	color: var(--colorNODE);
 }
+.fa-chatgpt {
+	/* color: white; */
+	background-image: url("./public/images/chat-gpt-logo.jpg");
+}
 
 @media (min-width: 768px) {
 	#titleDiv {
