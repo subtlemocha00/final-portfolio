@@ -9,8 +9,10 @@ const sl = document.getElementById("sideList");
 let todoList = [];
 const staples = [
 	"spinach",
+	"salads",
 	"lettuce",
 	"peppers",
+	"tomatoes",
 	"avocados",
 	"berries",
 	"onions",
@@ -24,7 +26,9 @@ const staples = [
 	"cheese",
 	"cottage cheese",
 	"sour cream",
-	"yogurt",
+	"yogurt cups",
+	"large vanilla yogurt",
+	"yogurt bottles",
 	"milk",
 	"eggs",
 	"cereal",
